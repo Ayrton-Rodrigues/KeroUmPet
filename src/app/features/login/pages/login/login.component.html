@@ -1,0 +1,50 @@
+
+<app-header></app-header>
+<main class="login-container">
+<div class="login-box">
+  <h1>Olá, 
+    venha participar dessa grande comunidade.
+  </h1>
+  <img class="login-cao" src="./assets/img/login2.png" alt="">
+</div>
+<form  action="">
+
+
+
+  <div class="login-form">
+    <h1>Faça login
+    e cadastre seus
+    seus amipets.</h1>
+    <form class="form">
+    
+     
+      <label for="email">Email</label>
+      <input type="email" [(ngModel)]="user" name="user"
+      placeholder="Insira seu email">
+      <label for="password">Senha</label>
+      <input type="password" [(ngModel)]="password" name="password" placeholder="Insira sua senha">
+    
+      <button (click)="loginUser()" type="button"
+      [disabled]="!user || !password">Entrar</button> 
+      <span>Não possui cadastro?</span>
+
+      <button>Cadastrar</button>
+    </form>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</form>
+</main>
+<app-footer></app-footer>
