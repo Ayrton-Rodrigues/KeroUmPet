@@ -1,14 +1,10 @@
-.login-container{
- 
+.login-container {
   display: flex;
- align-items: center;
-
+  align-items: center;
   margin: auto;
-  margin-top: 50px;
-gap: 0px
-;
- 
+  margin-top: 20px;
   max-width: 1200px;
+  gap: 200px;
 }
 
 .login-cao {
@@ -18,28 +14,26 @@ gap: 0px
   border-radius: 50%;
   background-position: center;
   background-size: cover;
-
 }
 
-.login-box{
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    place-items: center;
-   
+.login-box {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+
   h1 {
     font-size: 3rem;
     max-width: 20ch;
     text-align: center;
     padding: 20px;
-    
   }
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
-  h1{
+  h1 {
     font-size: 3rem;
     max-width: 20ch;
     text-align: center;
@@ -53,16 +47,17 @@ gap: 0px
   flex-direction: column;
   margin: auto;
   padding: 40px;
- input {
+  margin-bottom: 80px;
+
+  .input-text input{
     padding: 10px;
     width: 300px;
     margin-bottom: 30px;
     border: none;
     border-bottom: 3px solid #00aad5bd;
+    outline: none;
   }
-  label {
-    padding-bottom: 10px;
-  }
+
 
   button {
     padding: 10px;
@@ -73,13 +68,13 @@ gap: 0px
     border-radius: 6px;
     margin: 10px 0;
     cursor: pointer;
+    margin-bottom: 20px;
   }
-  button:last-child{
+  button:last-child {
     color: rgba(16, 16, 16, 0.613);
   }
-  span {
+  p {
     text-align: center;
     color: rgba(8, 8, 8, 0.589);
   }
-
 }

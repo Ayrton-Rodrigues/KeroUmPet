@@ -6,6 +6,8 @@ import { CreatePetComponent } from './pages/create-pet/create-pet.component';
 import { DetailsPetComponent } from './pages/details-pet/details-pet.component';
 import { PagePetComponent } from './pages/page-pet/page-pet.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { PageHomeComponent } from './pages/page-home/page-home.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -15,11 +17,16 @@ import { SharedModule } from 'src/app/shared/shared.module';
     PetListComponent,
     CreatePetComponent,
     DetailsPetComponent,
-    PagePetComponent
+    PagePetComponent,
+    PageHomeComponent,
+  
+    
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
+ 
   ]
 })
 export class PetModule { }

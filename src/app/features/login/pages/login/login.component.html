@@ -7,7 +7,6 @@
   </h1>
   <img class="login-cao" src="./assets/img/login2.png" alt="">
 </div>
-<form  action="">
 
 
 
@@ -15,36 +14,29 @@
     <h1>Faça login
     e cadastre seus
     seus amipets.</h1>
-    <form class="form">
-    
-     
-      <label for="email">Email</label>
-      <input type="email" [(ngModel)]="user" name="user"
-      placeholder="Insira seu email">
-      <label for="password">Senha</label>
-      <input type="password" [(ngModel)]="password" name="password" placeholder="Insira sua senha">
-    
-      <button (click)="loginUser()" type="button"
-      [disabled]="!user || !password">Entrar</button> 
-      <span>Não possui cadastro?</span>
+   
+    <form class="form"> 
+      
+      <div class="input-text">
 
-      <button>Cadastrar</button>
+        <input type="email" [(ngModel)]="email" name="user" placeholder="Insira seu Email">
+       
+
+      </div>
+
+      <div class="input-text">
+        <input type="password" [(ngModel)]="password" name="password" placeholder="Insira sua Senha" >
+        
+
+      </div>
+
+      <button (click)="loginUser()" type="button"
+      [disabled]="!email|| !password">Entrar</button> 
+      <p>Não possui cadastro?</p>
+
+      <button (click)="navigateByRegister('/register')">Cadastrar</button>
     </form>
   </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-</form>
 </main>
 <app-footer></app-footer>

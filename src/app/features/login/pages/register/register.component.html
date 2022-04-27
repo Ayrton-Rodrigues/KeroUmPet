@@ -1,1 +1,62 @@
-<p>register works!</p>
+<app-header></app-header>
+<main>
+   <!-- {{userForm.value | json}}  -->
+  <h1 class="text">Faça seu cadastro e contribua com essa comunidade.</h1>
+
+  <form [formGroup]="userForm">
+    <div class="container-input">
+      <h2 class="text-aux">Dados Cadastrais</h2>
+      <div class="inputArea">
+
+        <input
+          type="text"
+          formControlName="name"
+          id="name"
+          placeholder="Nome da Instituição"/>
+      </div>
+
+      <div class="inputArea">
+  
+        <input
+          type="email"
+          formControlName="email"
+          id="email"
+          placeholder="Insira o email"
+        />
+      </div>
+      <div class="inputArea">
+
+        <input
+          type="number"
+          formControlName="cnpj"
+          id="CNPJ"
+          placeholder="Insira o CNPJ"
+        />
+      </div>
+
+      <div class="inputArea">
+  
+        <input
+          type="text"
+          formControlName="district"
+          id="district"
+          placeholder="Qual o seu bairro?"
+        />
+      </div>
+
+      <div class="inputArea">
+
+        <input
+          type="password"
+          formControlName="password"
+          id="password"
+          placeholder="Insira sua senha"
+        />
+      </div>
+       <button type="submit" (click)="loginUser()" class="button">Salvar</button>
+    </div>
+
+   
+  </form>
+</main>
+<app-footer></app-footer>
