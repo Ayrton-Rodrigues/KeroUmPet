@@ -32,7 +32,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  loginUser(){
+  createUser(){
     const userValue = this.userForm.value
  
       this.user.name = userValue.name

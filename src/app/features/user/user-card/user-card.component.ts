@@ -18,7 +18,7 @@ export class UserCardComponent implements OnInit {
 
   ngOnInit(): void {  
 
-}
+} 
 
 getId(event: any){
   const user = this.user
