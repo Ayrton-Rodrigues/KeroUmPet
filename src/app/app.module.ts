@@ -6,24 +6,21 @@ import { AppComponent } from './app.component';
 import { LoginModule } from './features/login/login.module';
 import { PetModule } from './features/pet/pet.module';
 import { SharedModule } from './shared/shared.module';
-import { UserComponent } from './features/user/user/user.component';
-import { UserPageComponent } from './features/user/user-page/user-page.component';
-import { UserCardComponent } from './features/user/user-card/user-card.component';
+import { UserModule } from './features/user/user.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
-    UserPageComponent,
-    UserCardComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
     PetModule,
-    LoginModule
+    LoginModule,
+    UserModule
     
   ],
   providers: [],

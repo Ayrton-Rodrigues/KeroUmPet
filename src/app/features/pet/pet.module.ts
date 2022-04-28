@@ -6,7 +6,7 @@ import { CreatePetComponent } from './pages/create-pet/create-pet.component';
 import { DetailsPetComponent } from './pages/details-pet/details-pet.component';
 import { PagePetComponent } from './pages/page-pet/page-pet.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { PageHomeComponent } from './pages/page-home/page-home.component';
+import { PageHomeComponent } from '../home/pages/page-home/page-home.component';
 import { HttpClientModule } from '@angular/common/http';
 
 

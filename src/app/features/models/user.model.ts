@@ -1,4 +1,4 @@
-import { PetModel } from "./pet.model";
+
 
 export interface UserModel{
   id?: number,
@@ -7,5 +7,4 @@ export interface UserModel{
   cnpj: number,
   district: string,
   password: string,
-  pet: Array<PetModel>
 }

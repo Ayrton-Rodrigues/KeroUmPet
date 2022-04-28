@@ -11,12 +11,12 @@ export class RegisterComponent implements OnInit {
 
   modelUser(): UserModel{
     return {
+      
       name: '',
       email: '',
       cnpj: 0,
       district: '',
       password: '',
-      pet: []
     }
   }
 

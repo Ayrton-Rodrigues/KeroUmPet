@@ -18,7 +18,6 @@ export class PetCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  pets!: Array<PetModel>
 
 
   getByIndex(){
