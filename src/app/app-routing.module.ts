@@ -7,6 +7,7 @@ import { PagePetComponent } from './features/pet/pages/page-pet/page-pet.compone
 import { UserListComponent } from './features/user/components/user-list/user-list.component';
 import { PetPageComponent } from './features/user/pages/pet-page/pet-page.component';
 import { UserPageComponent } from './features/user/pages/user-page/user-page.component';
+import { AuthGuard } from './shared/guards/auth.guard';
 
 
 const routes: Routes = [
@@ -27,10 +28,10 @@ const routes: Routes = [
   },
 
   { 
-    path: 'user/:id', component: UserPageComponent
+    path: 'user/:id', component: UserPageComponent, canActivate: [AuthGuard]
   },
   { 
-    path: 'user/:id/:idPet', component: PetPageComponent
+    path: 'user/:id/:idPet', component: PetPageComponent, canActivate: [AuthGuard]
   },
   { 
     path: 'pets/:ownerId/:petId', component: DetailsPetComponent

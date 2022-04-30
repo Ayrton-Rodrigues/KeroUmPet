@@ -33,11 +33,8 @@ users!: Array<UserModel>
   return this.http.get<UserModel>(`${environment.backEndPets}/${id}`, this.options)
   }
 
-  
-  
-
-  getByFindId(id: number){
-    return this.users.find((user) => user.id === id)
+  exit(){
+    return localStorage.clear();
   }
 
 }

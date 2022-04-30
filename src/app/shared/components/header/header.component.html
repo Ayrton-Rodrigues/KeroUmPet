@@ -7,7 +7,8 @@
       <li (click)="navigate('/home')">Sobre</li>
       <li (click)="navigate('/pets')">Pets</li>
       <li>Contato</li>
-      <li (click)="navigate('/login')">Login</li>
+      <li  *ngIf="!user"  (click)="navigate('/login')">Login</li>
+      <li  *ngIf="user"   (click)="exit()" (click)="navigate('/login')">Logout</li>
     </ul>
 </nav>
 
