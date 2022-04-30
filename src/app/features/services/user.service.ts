@@ -8,7 +8,9 @@ import { environment } from 'src/environments/environment';
 })
 export class UserService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    
+  }
 
   options = { 
     headers: {
@@ -17,40 +19,47 @@ export class UserService {
 }
 
 
-users: Array<UserModel> = [];
+users!: Array<UserModel> 
 
-getAllUsers(){
+  getAllUsers(){
   return this.http.get<Array<UserModel>>(environment.backEndPets, this.options)
 }
 
-getUser(){
-  this.getAllUsers().subscribe((user) => {
-    this.users = user
-  })
-}
+  getLogin(email: string, password: string ){
+    return this.users.find((user) => user.email === email && user.password === password)
+  }
 
+  getUser(id: number){
+  return this.http.get<UserModel>(`${environment.backEndPets}/${id}`, this.options)
+  }
 
-getById(id: number){
-return this.users.find((user) => user.id === id)
+  
+  
 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  getByFindId(id: number){
+    return this.users.find((user) => user.id === id)
+  }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

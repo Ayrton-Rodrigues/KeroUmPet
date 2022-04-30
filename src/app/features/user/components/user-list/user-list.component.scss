@@ -1,0 +1,42 @@
+.container-main {
+ 
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+
+   .container-data {
+     display: flex;
+    justify-content: space-around;
+ 
+    gap: 400px;
+    border: 1px solid black;
+
+    .data-user{      
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      text-align: center;    
+      
+     
+      
+      .title{
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+        letter-spacing: 1.125;
+      }   
+    }
+   }
+
+
+   .container-pets{
+     display: flex;
+     justify-content: center;
+   }
+
+
+}
+
+

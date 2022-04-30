@@ -5,51 +5,40 @@ import { UserService } from 'src/app/features/services/user.service';
 
 @Component({
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
+  constructor(private router: Router, private userService: UserService) {}
 
-  constructor(private router: Router,
-              private userService: UserService
-  ) { }
-
-    users: Array<UserModel> = [];
+  users: UserModel[] = [];
 
   ngOnInit(): void {
     this.userService.getAllUsers().subscribe((user) => {
       this.users = user
-    })
+    });
   }
 
-  error: boolean = false
-  email?: string
-  password?: string
+  error: boolean = false;
+  email!: string;
+  password!: string;
 
+  user?: UserModel;
+  
 
+  loginUser() {
+   const user = this.users.find((user) => user.email === this.email && user.password === this.password)
+    this.user = user
+    if (!user) {
+      alert('Usuário não cadastrado');
+      this.router.navigateByUrl('login');
+    } else {      
+      console.log(localStorage.setItem('user', JSON.stringify(user)))
+      this.router.navigateByUrl(`user/${user?.id}`);
 
-  loginUser(){    
-
-  const user = this.users.find((user) => user.email === this.email && user.password === this.password)
-   
-    if(!user){
-      alert("Não existe")
-      this.router.navigateByUrl('login')
-    } else {
-   
-        sessionStorage.setItem('user', JSON.stringify(user));  
-        this.router.navigateByUrl(`user`);
-
-    }    
-
-      
+    }
   }
 
-  navigateByRegister(url: string){
-    this.router.navigateByUrl(url)
+  navigateByRegister(url: string) {
+    this.router.navigateByUrl(url);
   }
-
-
-
-
-
 }

@@ -1,11 +1,11 @@
 .card-pets{
+  margin-top: 40px;
   padding: 20px;
   display: flex;
-  max-width: 1200px;
-  margin: auto;
-  justify-content: center;
- 
-
+ justify-content: center;
+ gap: 50px;
+ min-height: 600px;
+ align-items: center;
   .card-pet{
     border: 1px solid black;
     box-shadow: 0 0 10px black;

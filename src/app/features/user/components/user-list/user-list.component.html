@@ -1,1 +1,20 @@
-<p>user-list works!</p>
+<main class="container-main">
+
+  <ul class="container-data">
+    
+    <li class="data-user"><span class="title">Bairro</span>{{ user?.district }}</li>
+    
+    <li class="data-user"><span class="title">Nome</span> {{user?.name }}</li>
+   
+    <li class="data-user"> <span class="title">CNPJ</span>{{ user?.cnpj }}</li>
+  </ul>
+
+<section class="container-pets">
+  
+  <app-user-pets *ngFor="let item of pets" [pet]="item"></app-user-pets>
+  
+</section>
+
+</main>
+
+

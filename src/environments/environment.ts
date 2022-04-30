@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  backEndPets: 'http://localhost:3000/user'
+  backEndPets: 'http://localhost:3000/user',
+  BackEndPetsPet: 'http://localhost:3000/pets',
 };
 
 /*
