@@ -26,8 +26,9 @@
         <input
           type="number"
           formControlName="cnpj"   
-          placeholder="Insira o CNPJ"
+          placeholder="Insira o CNPJ - somente números"
         />
+
       </div>
 
       <div class="inputArea">
@@ -44,8 +45,13 @@
         <input
           type="password"
           formControlName="password"         
-          placeholder="Insira sua senha"
+          placeholder="Insira sua senha"          
         />
+        <span class="error" *ngIf="userForm.controls['password'].errors && (
+        userForm.controls['password'].errors['minlength'])
+        ">
+        Digite senha válida, minimo 6 caracteres!
+  </span>
       </div>
        <button type="submit" 
         [disabled]="userForm.invalid" 
