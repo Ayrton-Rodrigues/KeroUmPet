@@ -6,6 +6,7 @@
     <ul class="nav-list">
       <li (click)="navigate('/home')">Home</li>
       <li (click)="navigate('/pets')">Pets</li>
+      <li *ngIf="!user">Contato</li>
       <li *ngIf="user" (click)="navigate('/createPet')"> Adicionar </li>
       <li  *ngIf="!user"  (click)="navigate('/login')">Login</li>
       <li  *ngIf="user"   (click)="exit()" (click)="navigate('/login')">Logout</li>
