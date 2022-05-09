@@ -1,22 +1,12 @@
-
-
 <div class="card-pets">
+  <ul class="card-pet">
+    <li class="item-pet"><img src="{{ pet.img }}" alt="" /></li>
+    <li class="item-pet"><span>Nome</span> {{ pet.name }}</li>
 
-<ul class="card-pet">
-  
-  <li class="item-pet"><img src="{{pet.img}}" alt=""></li> 
-  <li class="item-pet">Nome: {{pet.name}}</li>
-  <li class="item-pet">Descrição: {{pet.description}}</li>
-  <li class="item-pet">Idade: {{pet.age}}</li>
+    <li class="item-pet"><span>Idade</span> {{ pet.age }}</li>
 
-  
-
- <li class="button">
-   <button (click)="getByIndex()" (click)="navigateDetails()">Detalhes</button>   
- </li>
- 
-</ul>  
-
+    <li class="button">
+      <button (click)="navigateDetails()">Detalhes</button>
+    </li>
+  </ul>
 </div>
-
- 

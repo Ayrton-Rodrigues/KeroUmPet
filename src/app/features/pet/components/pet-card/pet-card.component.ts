@@ -17,14 +17,8 @@ export class PetCardComponent implements OnInit {
   idPet!: number;
 
   ngOnInit(): void {
-
     this.idPet = this.pet.id;
-    this.id = this.pet.ownerId
-
-  }
-
-  getByIndex() {
-    console.log(this.pet);
+    this.id = this.pet.ownerId;
   }
 
   navigateDetails() {
