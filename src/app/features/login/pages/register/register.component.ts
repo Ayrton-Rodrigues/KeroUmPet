@@ -13,9 +13,6 @@ export class RegisterComponent implements OnInit {
               private router: Router) {}
 
 
-
-  user: UserModel = this.userService.getModelUser();
-
   userForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -26,17 +23,18 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  createUser(){
-
+  onSubmit(){
+    const user = this.userService.getModelUser();
     const userValue = this.userForm.value
  
-      this.user.name = userValue.name
-      this.user.email = userValue.email
-      this.user.cnpj = userValue.cnpj
-      this.user.district = userValue.district
-      this.user.password = userValue.password
-      if(this.user)
-      this.userService.createUser(this.user).subscribe((result) => alert(`${this.user.name} adicionado com sucesso`)) 
-       console.log(this.user)
+      user.name = userValue.name
+      user.email = userValue.email
+      user.cnpj = userValue.cnpj
+      user.district = userValue.district
+      user.password = userValue.password      
+      this.userService.createUser(user).subscribe((result) => alert(`${user.name} adicionado com sucesso`))
+
+      console.log(user)
+      this.router.navigateByUrl('login')
   }
 }

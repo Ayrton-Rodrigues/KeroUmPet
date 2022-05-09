@@ -6,12 +6,11 @@
   <form [formGroup]="userForm">
     <div class="container-input">
       <h2 class="text-aux">Dados Cadastrais</h2>
-      <div class="inputArea">
 
+      <div class="inputArea">
         <input
           type="text"
-          formControlName="name"
-          id="name"
+          formControlName="name"          
           placeholder="Nome da Instituição"/>
       </div>
 
@@ -19,17 +18,14 @@
   
         <input
           type="email"
-          formControlName="email"
-          id="email"
+          formControlName="email"         
           placeholder="Insira o email"
         />
       </div>
       <div class="inputArea">
-
         <input
           type="number"
-          formControlName="cnpj"
-          id="CNPJ"
+          formControlName="cnpj"   
           placeholder="Insira o CNPJ"
         />
       </div>
@@ -38,8 +34,7 @@
   
         <input
           type="text"
-          formControlName="district"
-          id="district"
+          formControlName="district"        
           placeholder="Qual o seu bairro?"
         />
       </div>
@@ -48,12 +43,14 @@
 
         <input
           type="password"
-          formControlName="password"
-          id="password"
+          formControlName="password"         
           placeholder="Insira sua senha"
         />
       </div>
-       <button type="submit" [disabled]="userForm.invalid" (click)="createUser()" class="button">Salvar</button>
+       <button type="submit" 
+        [disabled]="userForm.invalid" 
+        (click)="onSubmit()" 
+         class="button">Salvar</button>
     </div>
 
    
