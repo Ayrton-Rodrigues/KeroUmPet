@@ -1,5 +1,4 @@
 .card-pets {
-
   display: flex;
   max-width: 1200px;
   margin: auto;
@@ -9,7 +8,7 @@
   .card-pet {
     background: #97e9fd76;    
     box-shadow: 0 0 10px black;
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px 10px 0 0;
 
     .item-pet {
@@ -23,8 +22,8 @@
 
     .item-pet img {
       max-width: 100%;
-      width: 300px;
-      height: 230px;
+      width: 200px;
+      height: 130px;
     }
   }
 }
@@ -34,12 +33,13 @@
 }
 .button button {
   width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
   padding: 10px;
   background-color: #00aad576;
   border: none;
-  letter-spacing: 1px;
+
   border-radius: 6px;
-  margin: 10px 0;
   cursor: pointer;
   margin-top: 20px;
 }
