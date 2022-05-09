@@ -21,7 +21,8 @@ import { CnpjPipe } from './pipe/cnpj.pipe';
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CnpjPipe
   ]
 })
 export class SharedModule { }
