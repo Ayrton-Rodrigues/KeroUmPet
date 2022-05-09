@@ -1,58 +1,130 @@
 .container-main {
- 
- max-width: 1200px;
-  margin: auto;
   display: grid;
-  justify-content: center;
+
   align-items: center;
   border: 1px solid red;
 
-
-
-   .container-data {
-     display: flex;
+  .container-data {
+    display: flex;
     justify-content: space-around;
-   width: 1200px;
- 
-    
+    flex-wrap: wrap;
+    width: 1200px;
+
     border: 1px solid black;
 
-    .data-user-name{
+    .data-user-name {
       margin-left: 60px;
       display: flex;
       flex-direction: column;
       padding: 10px;
-      text-align: center; 
-      .title{
+      text-align: center;
+      .title {
         margin-bottom: 10px;
         font-size: 1.2rem;
         letter-spacing: 1.125;
-      } 
+      }
     }
 
-    .data-user{      
+    .data-user {
       display: flex;
       flex-direction: column;
       padding: 10px;
-      text-align: center;    
-      
-     
-      
-      .title{
+      text-align: center;
+
+      .title {
         margin-bottom: 10px;
         font-size: 1.2rem;
         letter-spacing: 1.125;
-      }   
+      }
     }
-   }
+  }
 
-
-   .container-pets{
-     display: flex;
-     justify-content: center;
-   }
-
-
+  .container-pets {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
+.container-config {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
 
+  .text-config {
+    font-size: 1.6rem;
+  }
+
+  .config-link {
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+
+  .config-link:hover {
+    color: #00aad576;
+  }
+}
+
+.config-remove {
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+
+  button {
+    padding: 10px;
+    background-color: #00aad576;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px;
+  }
+}
+
+.container-input {
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.078);
+  padding: 40px;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgb(0, 0, 0);
+}
+
+.inputArea {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.inputArea input {
+  border: none;
+  outline: none;
+  border-bottom: 3px solid #00aad5bd;
+  padding: 15px 0;
+}
+
+.button {
+  padding: 10px;
+  background-color: #00aad5bd;
+  border: none;
+  font-size: 1.125rem;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  margin: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.inputArea select {
+  border: none;
+  outline: none;
+  border-bottom: 3px solid #00aad5bd;
+  padding: 10px 0;
+}
+
+.button-decision {
+  display: flex;
+  justify-content: space-around;
+}

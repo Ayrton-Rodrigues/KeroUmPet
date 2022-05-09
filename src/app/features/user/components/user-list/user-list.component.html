@@ -1,20 +1,45 @@
 <main class="container-main">
-
+  
   <ul class="container-data">
-    
-    <li class="data-user"><span class="title">Bairro</span>{{ user?.district }}</li>
-    
-    <li class="data-user-name"><span class="title">Nome</span> {{user?.name }}</li>
-   
-    <li class="data-user"> <span class="title">CNPJ</span>{{ user?.cnpj }}</li>
+    <li class="data-user">
+      <span class="title">Bairro</span>{{ user?.district }}
+    </li>
+
+    <li class="data-user-name">
+      <span class="title">Nome</span> {{ user?.name }}
+    </li>
+
+    <li class="data-user">
+      <!-- <span class="title">CNPJ</span>{{ user.cnpj  | cnpj }} -->
+    </li>
   </ul>
 
-<section class="container-pets">
+  <section class="container-config" >   
+    <p class="text-config">Seja Bem vindo {{ user.name }}</p>
+    <p class="config-link" (click)="trueOrFalse()">Configurações</p>
   
-  <app-user-pets *ngFor="let item of pets" [pet]="item"></app-user-pets>
+  </section>
   
-</section>
+  <section class="config-remove" *ngIf="ifUser">
 
+    <div>
+
+      <button (click)="removeTrueOrFalse()" class="button">
+        Excluir conta
+      </button>
+
+      <div *ngIf="removeUser" class="button-decision">
+
+        <button (click)="onRemoveUser()">Sim</button>
+        <button (click)="offRemove()">Não</button>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="container-pets">
+    <app-user-pets *ngFor="let item of pets" [pet]="item"></app-user-pets>
+  </section>
 </main>
 
 
