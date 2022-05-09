@@ -15,6 +15,18 @@ export class PetService {
     },
   };
 
+  getModelPet(){
+    return {
+      ownerId: 0,   
+      id: 0,      
+      name: '',
+      description: '', 
+      age: 0,  
+      img: 'https://conteudo.imguol.com.br/c/entretenimento/54/2020/04/28/cachorro-pug-1588098472110_v2_1x1.jpg',
+    }
+  }
+
+
   getAllPets() {
     return this.http.get<Array<PetModel>>(
       environment.BackEndPetsPet,
@@ -29,6 +41,12 @@ export class PetService {
   getPet(id: number, idPet: number) {
     return this.http.get<PetModel>(`${environment.BackEndPetsPet}/${id}/${idPet}`, this.options);
   }
+
+  createPet(pet: PetModel){
+    return this.http.post(environment.BackEndPetsPet, pet, {responseType: 'text'})
+  }
+
+
   
   deletePet(id: number, idPet: number){
     return this.http.delete(`${environment.BackEndPetsPet}/${id}/${idPet}`, this.options);
