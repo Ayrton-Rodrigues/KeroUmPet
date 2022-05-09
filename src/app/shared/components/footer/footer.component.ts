@@ -1,3 +1,4 @@
+import { getLocaleDateFormat } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,6 +11,10 @@ export class FooterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
+telephone: string = '(21) 93238-3832';
+email: string = 'keroumpet@gmail.com';
+date: Date = new Date();
 }
