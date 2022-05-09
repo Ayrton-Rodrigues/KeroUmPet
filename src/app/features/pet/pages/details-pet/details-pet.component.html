@@ -1,22 +1,35 @@
 <app-header></app-header>
-<div class="card-pets">
+<main class="container">
+  <section class="container-details">
+    <div class="pet-description">
+      <p class="text-description">
+        Olá, eu sou o(a) {{ pet.name }} e tenho {{ pet.age }} anos, meu sonho é
+        passar meu próximo aniversário em familia. Que tal você ser meu
+        convidado de honra?
+      </p>
+      <br />
+      <p class="text">
+        Entre em contato nesse email,
+        <span class="color-span">{{ user.email }}</span> para me buscar
+      </p>
+      <br />
+      <p class="text">
+        Ahh, você pode ajudar minha casa atual mandando qualquer valor para
+        contribuir através do pix a seguir.
+        <span class="text-flex"
+          ><img src="./assets/img/pix.png" alt="logo pix" />
+          <span class="color-span">{{ user.email }}</span
+          >, sua ajuda é muito importante.</span
+        >
+      </p>
+    </div>
 
-<ul class="card-pet">
-  
-  <li class="item-pet"><img src="{{pet.img}}" alt=""></li> 
-  <li class="item-pet">Nome: {{pet.name}}</li>
-  <li class="item-pet">Descrição: {{pet.description}}</li>
-  <li class="item-pet">Idade: {{pet.age}}</li>
-
-  
-
- <li class="button">
- 
- </li>
- 
-</ul>  
-
-</div>
-
+    <div class="card-pets">
+      <ul class="card-pet">
+        <li class="item-pet"><img src="{{ pet.img }}" alt="" /></li>
+      </ul>
+    </div>
+  </section>
+</main>
 
 <app-footer></app-footer>
