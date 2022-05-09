@@ -1,26 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserModel } from 'src/app/features/models/user.model';
+import { UserService } from 'src/app/features/services/user.service';
 
 @Component({
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
-  constructor() {}
+  constructor(private userService: UserService,
+              private router: Router) {}
 
-  modelUser(): UserModel{
-    return {
-      
-      name: '',
-      email: '',
-      cnpj: 0,
-      district: '',
-      password: '',
-    }
-  }
 
-  user: UserModel = this.modelUser()
+
+  user: UserModel = this.userService.getModelUser();
 
   userForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
@@ -33,6 +27,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {}
 
   createUser(){
+
     const userValue = this.userForm.value
  
       this.user.name = userValue.name
@@ -40,7 +35,8 @@ export class RegisterComponent implements OnInit {
       this.user.cnpj = userValue.cnpj
       this.user.district = userValue.district
       this.user.password = userValue.password
-   
-     console.log(this.user)
+      if(this.user)
+      this.userService.createUser(this.user).subscribe((result) => alert(`${this.user.name} adicionado com sucesso`)) 
+       console.log(this.user)
   }
 }

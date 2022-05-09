@@ -14,27 +14,41 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.userService.getAllUsers().subscribe((user) => {
-      this.users = user
+      this.users = user;
     });
   }
 
   error: boolean = false;
   email!: string;
   password!: string;
-
   user?: UserModel;
-  
+
+//   loginUserTeste() {
+// const user = this.userService.getUserByEmailAndPassword( this.email,
+//                                                          this.password
+//                                                         );
+//     if (!user) {
+//       alert('Usuário não cadastrado');
+//       this.router.navigateByUrl('login');
+//     } else {
+//       console.log(localStorage.setItem('user', JSON.stringify(user)));
+
+//       // this.router.navigateByUrl(`user/${user.id}`);
+//     }
+//   }
 
   loginUser() {
-   const user = this.users.find((user) => user.email === this.email && user.password === this.password)
-    this.user = user
+    const user = this.users.find(
+      (user) => user.email === this.email && user.password === this.password
+    );
+    this.user = user;
     if (!user) {
       alert('Usuário não cadastrado');
       this.router.navigateByUrl('login');
-    } else {      
-      console.log(localStorage.setItem('user', JSON.stringify(user)))
-      this.router.navigateByUrl(`user/${user?.id}`);
+    } else {
+      console.log(localStorage.setItem('user', JSON.stringify(user)));
 
+      this.router.navigateByUrl(`user/${user?.id}`);
     }
   }
 
