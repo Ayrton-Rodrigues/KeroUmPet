@@ -6,9 +6,10 @@
 }
 
 .container-pets{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   max-width: 1200px;
+  gap: 80px;
   justify-content: center;
   margin: auto;
   flex-wrap: wrap;

@@ -14,11 +14,9 @@
     .item-pet {
       margin-top: 20px;
       display: flex;
-      justify-content: space-around;
-      font-size: 1.225rem;
+      justify-content: space-around;      
       border: 1px solid #00aad576;
-      border-radius: 4px;
-    }
+      border-radius: 4px;    }
 
     .item-pet img {
       max-width: 100%;
@@ -33,13 +31,15 @@
 }
 .button button {
   width: 100%;
-  font-size: 1rem;
   font-weight: 500;
   padding: 10px;
   background-color: #00aad576;
   border: none;
-
   border-radius: 6px;
   cursor: pointer;
   margin-top: 20px;
 }
+.button button:hover {
+  background-color: rgb(0, 0, 0, 0.1);
+}
+
