@@ -1,5 +1,5 @@
 export interface PetModel {
-  ownerId: number,
+  ownerId?: number,
   id: number,
   name: string,
   description: string, 

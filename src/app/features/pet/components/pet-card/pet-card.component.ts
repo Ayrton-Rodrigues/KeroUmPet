@@ -13,7 +13,7 @@ export class PetCardComponent implements OnInit {
 
   @Input() pet!: PetModel;
 
-  id!: number;
+  id?: number;
   idPet!: number;
 
   ngOnInit(): void {

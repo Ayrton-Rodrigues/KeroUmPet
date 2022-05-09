@@ -1,1 +1,40 @@
-<p>create-pet works!</p>
+<app-header></app-header>
+
+<main class="container-create">
+
+  <div class="container-description">
+  <h1>Adicione um novo pet</h1>
+
+  <img src="https://st2.depositphotos.com/1606449/7516/i/450/depositphotos_75163555-stock-photo-cats-and-dogs-hanging-paws.jpg" alt="">
+
+  </div>
+
+
+<div class="container-create-pet"> 
+
+    <form [formGroup]="petForm" class="container-input" >
+      <h2 class="form-title">Insira os dados do seu novo pet</h2>
+      <div class="inputArea">
+
+      <input type="text" formControlName="name" placeholder="Nome do Pet" />
+      </div>
+      <div class="inputArea">
+        <select formControlName="description" id="Tipo">
+          
+          <option value="cachorro">Cachorro</option>
+          <option value="gato">Gato</option>
+        </select>
+      </div>
+      <div class="inputArea">
+        <input type="number" formControlName="age" placeholder="Idade" />
+      </div>
+      <button class="button" type="submit"
+      [disabled]="petForm.invalid"
+       (click)="createPet()">Adicionar</button>
+    </form>
+    </div>    
+  </main>
+
+
+
+<app-footer></app-footer>
