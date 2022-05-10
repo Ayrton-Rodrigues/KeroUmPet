@@ -19,7 +19,7 @@ export class UserService {
   user?: UserModel;
 
   getModelUser(): UserModel {
-    return {      
+    return {
       name: '',
       email: '',
       cnpj: '',
@@ -41,12 +41,6 @@ export class UserService {
     });
   }
 
-  getUserByEmailAndPassword(email: string, password: string) {
-    return this.users?.find((user) => {
-      user.email === email && user.password === password;
-    });
-  }
-
   getUser(id: number) {
     return this.http.get<UserModel>(
       `${environment.backEndPets}/${id}`,
@@ -55,21 +49,22 @@ export class UserService {
   }
 
   createUser(user: UserModel) {
-    return this.http.post(environment.backEndPets, user, {responseType: 'text'});
+    return this.http.post(environment.backEndPets, user, {
+      responseType: 'text',
+    });
   }
 
-  updateUser(id: number, user: UserModel){
-
+  updateUser(id: number, user: UserModel) {
     return this.http.put(
-      `${environment.backEndPets}/${id}`, user, this.options);
-  
-}
+      `${environment.backEndPets}/${id}`,
+      user,
+      this.options
+    );
+  }
 
-deleteUser(id: number){
-  return this.http.delete(
-    `${environment.backEndPets}/${id}`, this.options);  
-}
-
+  deleteUser(id: number) {
+    return this.http.delete(`${environment.backEndPets}/${id}`, this.options);
+  }
 
   exit() {
     return localStorage.clear();
