@@ -23,13 +23,17 @@ export class LoginComponent implements OnInit {
   password!: string;
   user?: UserModel;
 
+
   loginUser() {
     const user = this.users.find(
       (user) => user.email === this.email && user.password === this.password
     );
     if (!user) {
+      this.error = true;
+      
       this.router.navigateByUrl('login');
     } else {
+      
       localStorage.setItem('user', JSON.stringify(user));
       this.router.navigateByUrl(`user/${user?.id}`);
     }

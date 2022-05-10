@@ -7,7 +7,11 @@
 
   <div class="login-form">
     <h1>Faça login e cadastre seus seus amipets.</h1>
+
+
     <form class="form">
+      <p *ngIf="error">Usuário ou senha incorreta!</p>
+
       <div class="input-text">
         <input
           type="email"
